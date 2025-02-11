@@ -1,6 +1,0 @@
-FROM vllm/vllm-openai:latest
-
-ENTRYPOINT python3 -m vllm.entrypoints.openai.api_server \
-    --port ${PORT:-8000} \
-    --model ${MODEL_NAME:-RCorvalan/Llama-3.1-Tulu-3-8B-Q6_K-GGUF} \
-    ${REVISION:+--revision "$REVISION"}
